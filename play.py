@@ -1,4 +1,6 @@
 import classes
+import weapons
+import skills
 
 def confirm():
     a = input()
@@ -8,7 +10,7 @@ def confirm():
     return a
 
 print("Choose your class:")
-options = ["===================", "Barbarian", "Pirate", "Ninja", "Paladin", "Assassin", "==================="]
+options = ["===================", "Barbarian", "Pirate", "Samaurai", "Paladin", "Assassin", "==================="]
 print("\n".join(options))
 print("Type a name to view more.\n")
 choice = input().capitalize()
