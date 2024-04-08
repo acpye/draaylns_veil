@@ -76,4 +76,42 @@ Random Events:
     - Have a low chance to spawn (Always one per zone)
     - Text based events. Easy to code, hardest part will be coming up with enough of them that they feel natural and non-repetitive.
     - Darcy go wild here mr.creative director
+                                         
+                                      Example class breakdown
+With all skills present a lot of them almost force the player to build in a certain way, this is intentional as I just wanted to establish a groundwork for the characters and didnt want to overwhelm you guys because obviously its easy for me to come up with things without the burden of needing to actually code it myself. Ultimately I know next to nothing about that aspect so forgive me if i write something foolish.
+
+Also with the skills I think its important to decide the tone we want to go for with them, we can choose to go for a more balanced approach where while the skills can definitely be strong they have a cap and wont get too out of hand or allow them to be a bit silly
+
+Class breakdown- Samurai, Samurai as a class is all about waiting for the perfect moment to land the desisive finishing blow to an enemy or flury of attacks this works in tangent with the stamina system developed in tangent by Allie and I. To facilitate this play style samurai needs skills that allow it to outlast the opponents stamina as well as strike back with enough strenght for this playstyle to be worth it. Skills like meditate allow for them to store up their stamina at the risk of taking damage meaning the player can choose between this and the universal action of block which will probably consume stamina however would take less damage or even negating. 
+
+
+Samurai - After receiving damage next attack deals 200% damage 
+Example Skills - 
+Meditate - costs 0 stamina pass action onto next charicter (maybe heal some health depending on how weak it feels)
+Nukitsuke - The samurai redies their blade and passes the action their next series of attacks deal bonus damage
+Crushing blow - The samurai consumes all their stamina and attacks the lowest stamina enemy and deaals bonus damage the higher the difference in stamina and sunders
+Flow like water - (Passive skill) Each consecutive action by samurai increases atk by X untill the end of the turn
+
+
+Class breakdown - Pirate, Pirates unique skill steal allows them to aquire wealth at a higher rate than other classes at the risk of taking high damage and potentially ending a run. Pirates also have a passive ability that they start with that allows them to scale outside of combat once in combat they would probably have quite a standard playstyle around basic attacks and skills. I would also like to explore the idea of some skills that allow the pirate to play around the high amount of money they get without having to bury it and scale into the late game.
+ 
+Starting Passive - once the pirate has burried 10,20,30,40,50g worth of booty they upgrade giving increase to stats  (Cabin boy, Boat Swain, First Mate, Captain, Pirate Lord)
+Starting Skill - The pirate can steal 'booty' from the target that can be sold for money or buried to gain an increase to stats and weapon 
+
+Example Skills - 
+Guzzle - Drink beer self inflict a random status condition restore x amount of stamina (if possible I think it could be cool to see if we can make a few synergistic self status perks)
+Bribe  - Spend x amount of gold cause target enemy to target allys untill it runs out of stamina 
+
+Class breakdown - Paladin, Paladin is the main ''tank'' class and play around the unique passive of defence scaling hp allowing for them to absorb a lot of damage they would probably have access to in battle sustain such as a healing spell skill and other utility to provide support for their party.
+
+Starting Passive - x% of defence is converted to maximum hp (maybe something about being able to equip more armour)
+
+Example Skills - 
+Taunt - Cause all enemies to atk the paladin this turn (maybe gain bonus resistences)
+Holy clense - Cure all party members of status conditions
+Heal - Heal party members for x amount 
+Hammer of (random holy place in lore) - (Passive skill) Paladins basic atks use defence or hp instead of atk in calculations (igore if this is annoying)
+Attunment - (Passive skill) The effectivness of healing and sheilding for the paladins party is increased by x%
+ 
+
 =================================================================================================================================================
