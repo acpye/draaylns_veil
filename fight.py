@@ -11,6 +11,18 @@ colours = {
     'white': "0",
 }
 
+def healthBar(hitpoints, maxHitpoints, length):
+    dashConvert = int(maxHitpoints / length)
+    currentDashes = int(hitpoints / dashConvert)
+    remaininghitpoints = length - currentDashes
+
+    hitpointsDisplay = '█' * currentDashes
+    remainingDisplay = ' ' * remaininghitpoints
+    
+    print("|" + hitpointsDisplay + remainingDisplay + "|")  # Print out healthbar
+    print(f"HP: {hitpoints}/{maxHitpoints}")
+
+
 def text(words="", delay=0.015, colour='white', sound=False):
     for char in words:
         if sound:
@@ -26,37 +38,37 @@ def text(words="", delay=0.015, colour='white', sound=False):
 def block():
     return True
 
-def attack(self, target):
+def attack(attacker, target):
 
-    text(f"{self.name} Attacks!")
-    if self.stamina > 0:
-        self.stamina -= self.weapon.staminaConsumption
-        damage = (self.attack + self.weapon.damage + random.randint(1, self.weapon.damageRoll))
-        if self.stamina < 0:
+    text(f"{attacker.name} Attacks!")
+    if attacker.stamina > 0:
+        attacker.stamina -= attacker.weapon.staminaConsumption
+        damage = (attacker.attack + attacker.weapon.damage + random.randint(1, attacker.weapon.damageRoll))
+        if attacker.stamina < 0:
             damage = damage // 2
             text("They are too tired for a strong attack...", colour='blue')
 
         acc = random.randint(1, 100)
-        if acc < self.weapon.accuracy:
+        if acc < attacker.weapon.accuracy:
             crit = random.randint(1, 100)
-            if crit < self.weapon.critChance:
+            if crit < attacker.weapon.critChance:
                 target.hitpoints -= round(damage * 1.75)
                 target.hitpoints = max(target.hitpoints, 0)
-                if self.ally:
-                    return text(f"{self.name} landed a critical hit!\nThe {target.name} takes {int(damage * 1.5)} damage!\nHP: {target.hitpoints}/{target.maxHitpoints}", colour='red')
+                if target.ally:
+                    return text(f"The {attacker.name} landed a critical hit!\nThe {target.name} takes {int(damage * 1.5)} damage!", colour='red')
                 else:
-                    return text(f"The {self.name} landed a critical hit!\nThe {target.name} takes {int(damage * 1.5)} damage!\nHP: {target.hitpoints}/{target.maxHitpoints}", colour='red')
+                    return text(f"{attacker.name} landed a critical hit!\nThe {target.name} takes {int(damage * 1.5)} damage!", colour='red')
             else:
                 target.hitpoints -= damage
                 target.hitpoints = max(target.hitpoints, 0)
                 if target.ally:
-                    return text(f"{target.name} takes {damage} damage!\nHP: {target.hitpoints}/{target.maxHitpoints}", colour='red')
+                    return text(f"{target.name} takes {damage} damage!", colour='red')
                 else:
-                    return text(f"The {target.name} takes {damage} damage!\nHP: {target.hitpoints}/{target.maxHitpoints}", colour='red')
+                    return text(f"The {target.name} takes {damage} damage!", colour='red')
         else:
-            if self.ally:
-                return text(f"{self.name} missed.")
+            if attacker.ally:
+                return text(f"{attacker.name} missed.")
             else:
-                return text(f"The {self.name} missed.")
+                return text(f"The {attacker.name} missed.")
     else:
         return text("But they're exhausted...", colour='blue')
