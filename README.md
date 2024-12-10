@@ -22,4 +22,4 @@ Game Tips...
 - This game is being worked on by Ryan ([https://github.com/RyanDN6](url)) and Allie ([https://github.com/acpye](url))
 - Basic save/load functions exist, but theyll be improved later. The game isn't finished yet so it shouldn't be too much of a worry. 
 - Some features are not working, theyll be fixed over the next few months. Please be patient!
-- All music is original, made by me (Ryan)
+- All music is original, made by Ryan
